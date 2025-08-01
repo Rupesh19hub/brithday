@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Month, Sanuuu 💖</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      background: radial-gradient(circle, #ffebf0, #ffeaf6, #fff5fa);
+      font-family: 'Poppins', sans-serif;
+      color: #6b0e42;
+      overflow-x: hidden;
+      text-align: center;
+    }
+
+    .heading {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      color: #c2185b;
+      margin-top: 60px;
+      animation: bounceIn 2s ease-out;
+      text-shadow: 0 0 20px #ff85a2, 0 0 30px #ff85a2;
+    }
+
+    .highlight {
+      color: #e91e63;
+      font-weight: bold;
+      animation: glow 2s infinite alternate;
+    }
+
+    .message {
+      font-size: 1.3rem;
+      margin-top: 20px;
+      line-height: 1.8;
+      animation: fadeIn 3s ease;
+    }
+
+    .countdown {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #d81b60;
+      margin-top: 30px;
+      animation: slideIn 2s ease;
+    }
+
+    .btn-pink {
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      transition: 0.4s ease;
+      box-shadow: 0 8px 24px rgba(233, 30, 99, 0.3);
+      animation: fadeIn 4s ease;
+    }
+
+    .btn-pink:hover {
+      background-color: #c2185b;
+      transform: scale(1.05);
+    }
+
+    /* Heart Animation */
+    .hearts-container {
+      position: relative;
+      margin-top: 40px;
+      height: 200px;
+    }
+
+    .heart {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: #ff6090;
+      transform: rotate(-45deg);
+      animation: float 6s infinite ease-in-out;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: #ff6090;
+      border-radius: 50%;
+    }
+
+    .heart::before { top: -20px; left: 0; }
+    .heart::after { left: -20px; top: 0; }
+
+    .heart2 { left: 30%; animation-delay: 1s; }
+    .heart3 { left: 70%; animation-delay: 2s; }
+    .heart4 { left: 50%; animation-delay: 3s; }
+
+    @keyframes float {
+      0% { transform: rotate(-45deg) translateY(0); opacity: 1; }
+      100% { transform: rotate(-45deg) translateY(-180px); opacity: 0; }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff85a2, 0 0 20px #ff85a2; }
+      to { text-shadow: 0 0 20px #e91e63, 0 0 30px #e91e63; }
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.3); opacity: 0; }
+      50% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Optional photo */
+    .profile-pic {
+      margin-top: 30px;
+      width: 160px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: 0 0 20px rgba(233, 30, 99, 0.4);
+      animation: fadeIn 3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="heading">🎂 Happy Birthday Month, <span class="highlight">Sanuuu 💖</span></h1>
+
+  <p class="message">
+    As the calendar turns to August, my heart skips a beat — because it’s not just another month...
+    It’s your month.
+    The month the most beautiful soul was born — you, Sanika.
+    
+    From the moment you walked into my life, everything changed.
+    You filled my days with laughter, my nights with peace, and my heart with endless love.
+    Every day with you feels like a gift, but this month, the gift is you — and I celebrate you more than ever.
+    
+    You are strong, beautiful, kind, and incredibly special.
+    Your smile lights up every room, and your presence brings me comfort like nothing else can.
+    
+    On 21st August, the world was blessed with your light, and I was blessed to walk alongside it.
+    But I don’t want to wait until your birthday to tell you how much you mean to me.
+    So from today, I promise —
+    This entire month will be about cherishing you, appreciating you, and making sure you feel loved every single day.
+    
+    I’m so lucky to call you mine, Sanika.
+    And I’ll never stop being grateful for the way you love me, support me, and believe in me.
+    
+    🎂💌 Here's to the beginning of your birthday month — let the love, celebrations, and sweetness begin!
+    I love you endlessly, my precious Sanuuu! 💞
+  </p>
+
+  <!-- Optional: Add your photo -->
+  <!-- <img src="your-photo.jpg" alt="Rupesh & Sanu" class="profile-pic" /> -->
+
+  <div class="countdown" id="countdown">Loading countdown...</div>
+
+  <div class="hearts-container">
+    <div class="heart heart1"></div>
+    <div class="heart heart2"></div>
+    <div class="heart heart3"></div>
+    <div class="heart heart4"></div>
+  </div>
+
+  <button class="btn btn-pink mt-4">Forever Yours 💌</button>
+
+  <!-- Music -->
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Countdown Script -->
+  <script>
+    const countdownElement = document.getElementById("countdown");
+    const birthday = new Date("August 21, 2025 00:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = birthday - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.innerHTML = `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s until your special day 🎉`;
+
+      if (distance < 0) {
+        countdownElement.innerHTML = "🎉 It's your Birthday Today, Sanuuu! 🎂";
+      }
+    }
+
+    setInterval(updateCountdown, 1000);
+  </script>
+
+</body>
+</html>
