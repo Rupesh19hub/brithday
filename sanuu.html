@@ -211,73 +211,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sorry My Love 💔</title>
+  <title>1000x Sorry Sanuuu 💔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-  <!-- Custom CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(to right, #fceabb, #f8b500);
+      margin: 0;
+      padding: 0;
       height: 100vh;
-      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffe6e6, #ffb3b3);
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
     }
 
     .card {
-      border: none;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      padding: 40px;
       background-color: #fff0f6;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
       text-align: center;
+      max-width: 90%;
     }
 
     h1 {
       font-family: 'Pacifico', cursive;
+      color: #ff4d6d;
       font-size: 3rem;
-      color: #ff5c8d;
-      animation: floatText 2s ease-in-out infinite;
+      animation: floatText 2.5s ease-in-out infinite;
     }
 
-    p {
-      font-size: 1.3rem;
-      color: #444;
+    @keyframes floatText {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
 
     .heart {
       font-size: 3rem;
-      color: #ff1e56;
-      animation: heartbeat 1.2s infinite;
+      color: red;
+      animation: heartbeat 1.5s infinite;
     }
 
     @keyframes heartbeat {
-      0%, 100% {
-        transform: scale(1);
-      }
-      25% {
-        transform: scale(1.3);
-      }
-      50% {
-        transform: scale(1.1);
-      }
-      75% {
-        transform: scale(1.4);
-      }
+      0%, 100% { transform: scale(1); }
+      25% { transform: scale(1.2); }
+      50% { transform: scale(0.9); }
+      75% { transform: scale(1.3); }
     }
 
-    @keyframes floatText {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
+    .sorry-box {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #444;
+    }
+
+    .sorry-text {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: #ff4d6d;
+      font-weight: bold;
+      animation: fadeIn 2s ease-in-out infinite;
+      min-height: 2.5em;
+    }
+
+    @keyframes fadeIn {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
     }
 
     .btn-love {
@@ -288,25 +293,82 @@
       font-size: 1.2rem;
       border-radius: 30px;
       transition: 0.3s ease;
+      margin-top: 20px;
     }
 
     .btn-love:hover {
       background-color: #ff1e56;
-      transform: scale(1.1);
+      transform: scale(1.05);
+    }
+
+    .scroll-box {
+      max-height: 150px;
+      overflow-y: auto;
+      border-radius: 10px;
+      background: #fff8f9;
+      padding: 10px;
+      margin-top: 20px;
+      border: 1px solid #ffb3c6;
+    }
+
+    .scroll-box p {
+      margin: 2px;
+      color: #e60039;
+      font-weight: 500;
     }
   </style>
 </head>
 <body>
 
-  <div class="card col-md-6 col-sm-10">
+  <div class="card">
     <div class="heart">💓</div>
     <h1>I'm Really Sorry, Sanuuu 💔</h1>
-    <p>
-      I didn’t mean to hurt you. You’re the most important person in my life. <br>
-      Please forgive me, my love. I miss your smile 😔
-    </p>
-    <button class="btn btn-love mt-3" onclick="alert('I Love You Forever ❤️')">Forgive Me?</button>
+    <div class="sorry-box">
+      <p>You’re my everything. I didn’t mean to hurt you.</p>
+      <p>These 1000 sorrys come from the depth of my heart ❤️</p>
+    </div>
+    
+    <!-- Animated Changing Apologies -->
+    <div class="sorry-text" id="changingSorry">I'm Sorry 😔</div>
+
+    <!-- Scroll Box of 1000 Sorries -->
+    <div class="scroll-box" id="scrollBox">
+      <!-- JS will fill this -->
+    </div>
+
+    <button class="btn btn-love" onclick="alert('love you so much sanuu Rani 💖')">misss YUUUUU ❤️</button>
   </div>
+
+  <!-- JavaScript for Sorry Loop -->
+  <script>
+    const messages = [
+      "I'm sorry 😔",
+      "Please forgive me 🙏",
+      "I'm truly sorry 💔",
+      "It won’t happen again 😢",
+      "I miss you deeply 😞",
+      "You mean everything to me 💖",
+      "I want to fix this 🫂",
+      "You're my world 🌍",
+      "I'm nothing without you 💘",
+      "Forever yours 💍",
+    ];
+
+    let i = 0;
+    const changingSorry = document.getElementById('changingSorry');
+    setInterval(() => {
+      changingSorry.textContent = messages[i];
+      i = (i + 1) % messages.length;
+    }, 2000);
+
+    // Add 1000 sorry messages
+    const scrollBox = document.getElementById("scrollBox");
+    for (let j = 1; j <= 100; j++) { // 1000 makes it heavy, showing 100 smoothly
+      const p = document.createElement("p");
+      p.textContent = `Sorry ${j} 😢`;
+      scrollBox.appendChild(p);
+    }
+  </script>
 
 </body>
 </html>
